@@ -35,4 +35,15 @@ router.post('/verify', (req, res) => {
     });
 });
 
+router.post('/verify2', (req, res) => {
+
+    jwt.sign({user: req.body.user}, 'secretKey', (err, token) => {
+        if (err) {
+            return res.sendStatus(403);
+        }
+
+        res.status(200).send({usuario: req.body.user, token : token});
+    });
+});
+
 module.exports = router;
