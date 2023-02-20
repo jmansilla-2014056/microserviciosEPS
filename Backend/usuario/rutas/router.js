@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
 
 //Estadio
 router.post("/test", userCtl.FTest);
-router.post("/auth", userCtl.);
+router.post("/auth", userCtl.Auth);
 router.post("/")
 
 module.exports = router;
